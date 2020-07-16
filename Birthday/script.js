@@ -1,5 +1,5 @@
 var slideshow = document.getElementById("img-slideshow");
-var slides = ["file_526114.jpg", "Mom and Eric summer coaster.jpg"];
+var slides = ["file_526114.jpg"];
 var slide = 0;
 var frame = 0;
 
