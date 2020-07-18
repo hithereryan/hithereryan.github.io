@@ -30,20 +30,32 @@ var questionList = [
 ["PEACHY", "This dairy product is often paired with peaches to describe someone with a fair complexion", "The mushroom kingdom is the home of this bae of Mario", "The Chick-Fil-A Peach Bowl is a college football game played in this state capital", "The name of this smooth-skinned peach begins with the favored drink of the Greek gods", "Also the name of a job, it's the popular peachy dessert"],
 ["2018 ESPY WINNERS", "Martin Truex Jr. of this racing circuit sped away with Best Driver", "Best Player in this league was a layup for Maya Moore of the Minnesota Lynx", "Born Alexandra, this gymnast was one of the 'sister survivors' who won the Arthur Ashe Courage Award", "Alexander Ovechkin was 2018's Best Male Athlete for finally winning the Stanley Cup with this team", "Once the backup, this Eagles QB won Best Championship Performance for his work in Super Bowl 52"],
 ["'V'OCABULARY", "Title for the student with the highest academic ranking who delivers a speech at graduation", "It's a household appliance, or a space devoid of matter", "Hazy or unspecific", "This 8-letter word is a synonym for neighborhood","It's a member of the Camel family, seen <a href='https://upload.wikimedia.org/wikipedia/commons/5/59/Vicugna_vicugna_at_about_4%2C000m%2C_near_the_Chajnantor_Plateau%2C_NW_Chile._Simon_Green_17th_April_2018.jpg' target = '_blank'> here</a>"],
-["WHERE IS THAT MOUNT", "Fuji", "Denali", "Parnassus & Helicon", "Zion & Sodom", "Phnom Aoral"]];
+["WHERE IS THAT MOUNT", "Fuji", "Denali", "Parnassus & Helicon", "Zion & Sodom", "Phnom Aoral"],
+["PRESIDENTS BY FIRST NAME", "The one and only Zachary", "The 2 Andrews", "3 of the 4 Williams", "The last John alphabetically by last name", "The 2 Thomases (one went by his middle name)"]];
 var answerList = [
 ["Lip Synch Challenges", "Marshmallows", "The Mannequin Challenge", "Charlie", "Matilda"],
 ["Moana", "Fast and Furious", "San Andreas", "Kevin Hart", "The Scorpion King"],
 ["Cream", "Princess Peach", "Atlanta", "Nectarine", "Cobbler"],
 ["NASCAR", "The WNBA", "Aly Raisman", "The Washington Capitals", "Nick Foles"],
 ["Valedictorian", "Vacuum", "Vague", "Vicinity", "Vicuna"],
-["Japan", "United States", "Greece", "Israel", "Cambodia"]];
-var catsUsed = [];
-/*var override = function(){
+["Japan", "United States", "Greece", "Israel", "Cambodia"],
+["Taylor", "Jackson and Johnson", "Taft, Harrison, Clinton and/or McKinley", "Tyler", "Jefferson and Wilson"]];
+var catsList = [];
+/*function override(){
   window.requestAnimationFrame(override);
 }*/
+function shuffle(a) {
+    var j, x, i;
+    for (i = a.length - 1; i > 0; i--) {
+        j = Math.floor(Math.random() * (i + 1));
+        x = a[i];
+        a[i] = a[j];
+        a[j] = x;
+    }
+    return a;
+}
 
-var addName = function(e){
+function addName(e){
   var name = document.getElementById("players").value;
   e.preventDefault();
   if (numNames == 0){
@@ -60,7 +72,7 @@ var addName = function(e){
   p2Score.textContent = players[1][0] + ": $" + players[1][1];
   p3Score.textContent = players[2][0] + ": $" + players[2][1];
 }
-var begin = function(){
+function begin(){
   form.style.display = "none";
   start.style.display = "none";
   for (var i = 0; i< 5; i++){
@@ -69,17 +81,12 @@ var begin = function(){
       boxes[i].childNodes[box].addEventListener("click", callQuestion, {once: true});
     }
   }
-  for (var k = 0; k<6; k++){
-    var cat = Math.floor(Math.random()*questionList.length);
-    catsUsed.push(questionList[cat]);
-    questionList.splice(cat, 1);
-    answersUsed.push(answerList[cat]);
-    answerList.splice(cat, 1);
-    headers.childNodes[2*k+1].textContent = catsUsed[k][0];
+  for (var k = 0; k<questionList.length; k++){
+    catsList.push(k);
   }
-  for (var k = 0; k<6; k++){
-    questionList.unshift(catsUsed[5-k]);
-    answerList.unshift(answersUsed[5-k]);
+  catsList = shuffle(catsList);
+  for (var i = 0; i < 6; i++) {
+    headers.childNodes[2*i+1].textContent = questionList[catsList[i]][0];
   }
 }
 
@@ -98,8 +105,7 @@ var callQuestion = function(e){
   wrong.style.display = "none";
   pSelect.style.display = "none";
   var box = column*2+1;
-  text.innerHTML = questionList[column][row+1];
-  console.log(column);
+  text.innerHTML = questionList[catsList[column]][row+1];
   boxes[row].childNodes[box].innerHTML = "";
   value = boxes[row].className;
   text.style.top = "110px";
@@ -110,7 +116,7 @@ var callQuestion = function(e){
 }
 var answer = function(){
   answering = false;
-  text.innerHTML = answerList[column][row];
+  text.innerHTML = answerList[catsList[column]][row];
   text.style.top = "160px";
   timer.style.display = "none";
   pSelect.style.display = "block";
