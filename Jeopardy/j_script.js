@@ -73,12 +73,14 @@ var begin = function(){
     var cat = Math.floor(Math.random()*questionList.length);
     catsUsed.push(questionList[cat]);
     questionList.splice(cat, 1);
+    answersUsed.push(answerList[cat]);
+    answerList.splice(cat, 1);
     headers.childNodes[2*k+1].textContent = catsUsed[k][0];
   }
   for (var k = 0; k<6; k++){
     questionList.unshift(catsUsed[5-k]);
+    answerList.unshift(answersUsed[5-k]);
   }
-  console.log(catsUsed, questionList);
 }
 
 var callQuestion = function(e){
