@@ -39,9 +39,9 @@ var answerList = [
 ["Valedictorian", "Vacuum", "Vague", "Vicinity", "Vicuna"],
 ["Japan", "United States", "Greece", "Israel", "Cambodia"]];
 var catsUsed = [];
-var override = function(){
+/*var override = function(){
   window.requestAnimationFrame(override);
-}
+}*/
 
 var addName = function(e){
   var name = document.getElementById("players").value;
@@ -195,4 +195,4 @@ var showWinner = function(){
 form.addEventListener("submit", addName);
 start.addEventListener("click", begin, {once: true});
 startTimer();
-override();
+//override();
