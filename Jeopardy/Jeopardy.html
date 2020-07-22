@@ -3,18 +3,19 @@
   <meta charset="utf-8">
   <title>Jeopardy</title>
   <link rel="icon" href="Logo.png" type="image/png">
-  <link rel = "stylesheet" type = "text/css" href = "j_style.css">
+  <link rel = "stylesheet" type = "text/css" href = "style.css">
 </head>
 <body>
   <div class="header">
     <h1 id = "title">Jeopardy</h1>
-    <div class="players">
+    <div class = "players" id = "why">
       <form id="form" method="post">
         <label for="players" id = "enter-players">Who's playing?</label>
+        <br>
         <input type="text" id = "players" name="players" value="">
-        <button type="submit" id = "submit" name="button">Join Game</button>
+        <button type="submit" id = "submit" name="button">Add Player</button>
       </form>
-      <button type= "button" id = "start" name="button">Start</button>
+      <button type= "button" id = "start" name="button">Start Game</button>
     </div>
   </div>
 
@@ -31,7 +32,7 @@
 
   <table id = "prices">
     <tr class = "200">
-      <td>$200</td>
+      <td id = "hi">$200</td>
       <td>$200</td>
       <td>$200</td>
       <td>$200</td>
@@ -78,9 +79,9 @@
     <p id = "timer"></p>
     <p id = "text">a</p>
     <select id = "player-select">
-      <option value="p1">Player 1</option>
-      <option value="p2">Player 2</option>
-      <option value="p3">Player 3</option>
+      <option value="p1" id = "p1">Player 1</option>
+      <option value="p2" id = "p2">Player 2</option>
+      <option value="p3" id = "p3">Player 3</option>
     </select>
     <button type="button" value = "correct" id = "correct" class = "button" name="button">Got it right!</button>
     <button type="button" value = "incorrect" id = "incorrect" class = "button" name="button">Got it wrong</button>
@@ -101,6 +102,6 @@
   <audio controls autoplay src="Jeopardy-theme-song.mp3" loop = "true">
   </audio>
 
-  <script src = "j_script.js"></script>
+  <script src = "script.js"></script>
 
 </body>
