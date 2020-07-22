@@ -1,4 +1,4 @@
-var boxes = document.getElementById("prices").getElementsByTagName("tr");
+var boxes =     document.getElementById("prices").getElementsByTagName("tr");
 var timer = document.getElementById("timer");
 var scoreDisplay = document.getElementById("score1");
 var right = document.getElementById("correct");
@@ -12,6 +12,7 @@ var p2Score = document.getElementById("score2");
 var p3Score = document.getElementById("score3");
 var pSelect = document.getElementById("player-select");
 var headers = document.getElementById("cat");
+var head = document.getElementById("why");
 var answering = false;
 var time = 30;
 var secSplit = 0;
@@ -41,9 +42,6 @@ var answerList = [
 ["Japan", "United States", "Greece", "Israel", "Cambodia"],
 ["Taylor", "Jackson and Johnson", "Taft, Harrison, Clinton and/or McKinley", "Tyler", "Jefferson and Wilson"]];
 var catsList = [];
-/*function override(){
-  window.requestAnimationFrame(override);
-}*/
 function shuffle(a) {
     var j, x, i;
     for (i = a.length - 1; i > 0; i--) {
@@ -56,17 +54,18 @@ function shuffle(a) {
 }
 
 function addName(e){
-  var name = document.getElementById("players").value;
+  var name = document.getElementById("players");
   e.preventDefault();
   if (numNames == 0){
-    players[0][0] = name;
+    players[0][0] = name.value;
   }
   else if (numNames == 1){
-    players[1][0] = name;
+    players[1][0] = name.value;
   }
   else{
-    players[2][0] = name;
+    players[2][0] = name.value;
   }
+  name.value = "";
   numNames ++;
   p1Score.textContent = players[0][0] + ": $" + players[0][1];
   p2Score.textContent = players[1][0] + ": $" + players[1][1];
@@ -75,6 +74,7 @@ function addName(e){
 function begin(){
   form.style.display = "none";
   start.style.display = "none";
+  head.style.display = "none";
   for (var i = 0; i< 5; i++){
     for (var j =0; j<6; j++){
       var box = j*2+1;
@@ -89,7 +89,6 @@ function begin(){
     headers.childNodes[2*i+1].textContent = questionList[catsList[i]][0];
   }
 }
-
 var callQuestion = function(e){
   var text = document.getElementById("text");
   //currently showing the question
@@ -98,7 +97,7 @@ var callQuestion = function(e){
   timer.style.display = "block";
   //math for what box cursor was in
   column = Math.floor(e.clientX/(window.innerWidth * 0.1666));
-  row = Math.floor((e.clientY-270)/90);
+  row = Math.floor((e.clientY-document.getElementById("hi").getBoundingClientRect().top)/85);
   // declaring and styling the question
   question.style.display = "block";
   right.style.display = "none";
@@ -120,6 +119,9 @@ var answer = function(){
   text.style.top = "160px";
   timer.style.display = "none";
   pSelect.style.display = "block";
+  document.getElementById("p1").textContent = players[0][0];
+  document.getElementById("p2").textContent = players[1][0];
+  document.getElementById("p3").textContent = players[2][0];
   right.style.display = "block";
   wrong.style.display = "block";
   right.addEventListener("click", close, {once: true});
@@ -203,4 +205,3 @@ var showWinner = function(){
 form.addEventListener("submit", addName);
 start.addEventListener("click", begin, {once: true});
 startTimer();
-//override();
