@@ -46,7 +46,6 @@ th, td{
   width: 16%;
   word-break: break-word;
 }
-
 th{
   color: white;
   height: 100px;
@@ -54,6 +53,10 @@ th{
 td{
   color: yellow;
   height: 80px;
+}
+td:hover {
+  border: 2px solid yellow;
+  height: 76px;
 }
 .button, #player-select{
   diplay: none;
