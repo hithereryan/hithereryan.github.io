@@ -1,17 +1,24 @@
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
 h1{
   color: "blue";
   position: relative;
-  top: 0.5em;
 }
 body{
   background-color: #96C0EB;
   text-align: center;
 }
+#name{
+  position: relative;
+  top: -1em;
+}
 #firstImg{
   height: 300px;
   position: absolute;
-  top: 150px;
-  left: 25vw;
+  top: 9vw;
+  left: 40vw;
 }
 #message{
   position: relative;
@@ -20,13 +27,13 @@ body{
   left: 300px;
 }
 .top-line{
-  height: 400px;
+  height: 25vw;
 }
 #easter-egg{
-  font-size: 4px;
+  font-size: 0.2vw;
   position: absolute;
   right: 10px;
-  top: 1000px;
+  top: 55vw;
   margin: 10px;
 }
 #slideshow{
@@ -35,7 +42,7 @@ body{
   overflow-y:visible;
   position: absolute;
   left: 5vw;
-  height: 300px;
+  height: 20vw;
   padding: none;
   margin: none;
 }
@@ -55,9 +62,14 @@ body{
   position: absolute;
   right: 100px;
 }
-#cupcake{
+.cupcake{
   position: absolute;
-  left: 40vw;
-  width: 20vw;
-  top: 200px;
+  width: 10vw;
+  top: 20vw;
+}
+#c1{
+  left: 32vw;
+}
+#c2{
+  left: 53vw;
 }
