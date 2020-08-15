@@ -30,7 +30,6 @@ changeSlide = function(){
       totalWidth = max-7;
     }
     var tempLeft = images[i].getBoundingClientRect().left;
-    console.log(s, slides.length);
     if (s == slides.length){
       tempLeft-=3;
     }
