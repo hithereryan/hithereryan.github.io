@@ -1,0 +1,75 @@
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+h1{
+  color: "blue";
+  position: relative;
+}
+body{
+  background-color: #96C0EB;
+  text-align: center;
+}
+#name{
+  position: relative;
+  top: -1em;
+}
+#firstImg{
+  height: 300px;
+  position: absolute;
+  top: 9vw;
+  left: 40vw;
+}
+#message{
+  position: relative;
+  top: 80px;
+  font-size: 20px;
+  left: 300px;
+}
+.top-line{
+  height: 25vw;
+}
+#easter-egg{
+  font-size: 0.2vw;
+  position: absolute;
+  right: 10px;
+  top: 55vw;
+  margin: 10px;
+}
+#slideshow{
+  width: 90vw;
+  overflow-x: hidden;
+  overflow-y:visible;
+  position: absolute;
+  left: 5vw;
+  height: 20vw;
+  padding: none;
+  margin: none;
+}
+.slideshow-img{
+  position: absolute;
+}
+.balloon{
+    position: absolute;
+    top: 100px;
+    height: 250px;
+}
+#b1{
+  position: absolute;
+  left: 100px;
+}
+#b2{
+  position: absolute;
+  right: 100px;
+}
+.cupcake{
+  position: absolute;
+  width: 10vw;
+  top: 20vw;
+}
+#c1{
+  left: 32vw;
+}
+#c2{
+  left: 53vw;
+}
