@@ -1,10 +1,63 @@
 h1{
   color: "blue";
+  position: relative;
+  top: 0.5em;
 }
 body{
   background-color: #96C0EB;
   text-align: center;
 }
-#img-slideshow{
-  width: 40%
+#firstImg{
+  height: 300px;
+  position: absolute;
+  top: 150px;
+  left: 25vw;
+}
+#message{
+  position: relative;
+  top: 80px;
+  font-size: 20px;
+  left: 300px;
+}
+.top-line{
+  height: 400px;
+}
+#easter-egg{
+  font-size: 4px;
+  position: absolute;
+  right: 10px;
+  top: 1000px;
+  margin: 10px;
+}
+#slideshow{
+  width: 90vw;
+  overflow-x: hidden;
+  overflow-y:visible;
+  position: absolute;
+  left: 5vw;
+  height: 300px;
+  padding: none;
+  margin: none;
+}
+.slideshow-img{
+  position: absolute;
+}
+.balloon{
+    position: absolute;
+    top: 100px;
+    height: 250px;
+}
+#b1{
+  position: absolute;
+  left: 100px;
+}
+#b2{
+  position: absolute;
+  right: 100px;
+}
+#cupcake{
+  position: absolute;
+  left: 40vw;
+  width: 20vw;
+  top: 200px;
 }
