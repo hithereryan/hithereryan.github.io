@@ -6,6 +6,19 @@ var last = slides.length-1;
 var j = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 var why = document.getElementById("this-is-annoying");
 var s = 0;
+var img = document.getElementById("firstImg");
+var c1 = document.getElementById("c1");
+var c2 = document.getElementById("c2");
+if (window.innerHeight/window.innerWidth> 1.5){
+  document.getElementById("top-line").style.height = "300px";
+  console.log("done");
+  img.style.height = "280px";
+  c1.style.top = "300px";
+  c2.style.top = "300px";
+}
+img.style.left = "calc(50vw - " + (img.getBoundingClientRect().width)/2 + "px)";
+c1.style.left = "calc(" + img.getBoundingClientRect().left + "px - 5vw)";
+c2.style.left = "calc(" + img.getBoundingClientRect().right + "px - 5vw)";
 
 function shuffle(array) {
   var currentIndex = array.length, temporaryValue, randomIndex;
@@ -30,7 +43,6 @@ changeSlide = function(){
       totalWidth = max-7;
     }
     var tempLeft = images[i].getBoundingClientRect().left;
-    console.log(s, slides.length);
     if (s == slides.length){
       tempLeft-=3;
     }
