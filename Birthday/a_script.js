@@ -9,10 +9,10 @@ var s = 0;
 var img = document.getElementById("firstImg");
 var c1 = document.getElementById("c1");
 var c2 = document.getElementById("c2");
-document.getElementById("name").innerHTML = window.innerHeight.toString + ", " + window.innerWidth.toString;
+document.getElementById("name").innerHTML = window.innerHeight + ", " + window.innerWidth.toString;
 if (window.innerHeight/window.innerWidth> 1.5){
   document.getElementById("top-line").style.height = "300px";
-  console.log("done");
+  console.log(window.innerHeight, window.innerWidth);
   img.style.height = "280px";
   c1.style.top = "300px";
   c2.style.top = "300px";
