@@ -65,7 +65,7 @@ for (var i = 0; i<slides.length; i++){
     s++;
     this.style.left = "calc(2% + " + totalWidth + "px)";
     totalWidth = this.getBoundingClientRect().right - 0.07*window.innerWidth  - 2;
-    if (s==slides.length-1){
+    if (s==20){
       changeSlide();
     }
   }
