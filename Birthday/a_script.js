@@ -71,8 +71,8 @@ for (var i = 0; i<slides.length; i++){
       changeSlide();
       document.getElementById("name").innerHTML = totalWidth + ", " + this.width;
     }
-    else{
-    document.getElementById("name").innerHTML = document.getElementById("name").innerHTML + this.getBoundingClientRect().left;
+    if ( s == 20){
+      document.getElementById("name").innerHTML += ", " + totalWidth; 
     }
   }
   tempSlide.src = slides[i];
