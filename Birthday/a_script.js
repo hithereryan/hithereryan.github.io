@@ -9,7 +9,6 @@ var s = 0;
 var img = document.getElementById("firstImg");
 var c1 = document.getElementById("c1");
 var c2 = document.getElementById("c2");
-//document.getElementById("name").innerHTML = window.innerHeight + ", " + window.innerWidth;
 if (window.innerHeight/window.innerWidth> 1.35){
   document.getElementById("top-line").style.height = "300px";
   img.style.height = "280px";
@@ -70,6 +69,7 @@ for (var i = 0; i<slides.length; i++){
     s++;
     if (s<=1){
       changeSlide();
+      document.getElementById("name").innerHTML = window.innerWidth + ", " + this.width;
     }
   }
   tempSlide.src = slides[i];
