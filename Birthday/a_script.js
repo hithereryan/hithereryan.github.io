@@ -64,15 +64,14 @@ for (var i = 0; i<slides.length; i++){
   tempSlide.style.position = "absolute";
   tempSlide.onload = function(){
     this.style.display = "block";
-    this.style.left = "calc(5vw + " + totalWidth + "px)";
-//    totalWidth = totalWidth + this.width - 1;
     s++;
-    if (s<=1){
-      changeSlide();
+    this.style.left = "calc(5vw + " + totalWidth + "px)";
+    totalWidth += this.width - 1;
+    if ( s == 20){
       document.getElementById("name").innerHTML = totalWidth + ", " + this.width;
     }
-    if ( s == 20){
-      document.getElementById("name").innerHTML += ", " + totalWidth; 
+    if (s==slides.length-1){
+      changeSlide();
     }
   }
   tempSlide.src = slides[i];
