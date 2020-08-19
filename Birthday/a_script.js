@@ -67,6 +67,7 @@ for (var i = 0; i<slides.length; i++){
     document.getElementById("name").innerHTML += this.getBoundingClientRect().width + ", " + this.width + ", ";
     if (s==slides.length-1){
       changeSlide();
+      document.getElementById("message").innerHTML = this.offsetWidth + ", " + this.width;
     }
   }
   tempSlide.src = slides[i];
