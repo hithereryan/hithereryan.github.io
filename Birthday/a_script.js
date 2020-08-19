@@ -12,8 +12,8 @@ var c2 = document.getElementById("c2");
 if (window.innerHeight/window.innerWidth> 1.35){
   document.getElementById("top-line").style.height = "300px";
   img.style.height = "280px";
-  c1.style.top = "300px";
-  c2.style.top = "300px";
+  c1.style.top = "310px";
+  c2.style.top = "310px";
 }
 img.style.left = "calc(50vw - " + (img.getBoundingClientRect().width)/2 + "px)";
 c1.style.left = "calc(" + img.getBoundingClientRect().left + "px - 5%)";
