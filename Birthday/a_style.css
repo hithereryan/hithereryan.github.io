@@ -16,10 +16,6 @@ audio{
   left: 40%;
   top: 96vh;
 }
-audio{
- position: relative;
- top: 20vw;
-}
 #name{
   position: relative;
   top: -1em;
