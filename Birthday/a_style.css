@@ -47,6 +47,8 @@ body{
 }
 .slideshow-img{
   position: absolute;
+  height: 20vw;
+  display: none;
 }
 .balloon{
     position: absolute;
