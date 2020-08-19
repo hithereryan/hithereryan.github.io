@@ -58,10 +58,7 @@ for (var i = 0; i<slides.length; i++){
 
   const tempSlide = new Image();
   tempSlide.className = "slideshow-img";
-  tempSlide.style.height = "20vw";
   slideshow.appendChild(tempSlide);
-  tempSlide.style.display = "none";
-  tempSlide.style.position = "absolute";
   tempSlide.onload = function(){
     this.style.display = "block";
     s++;
