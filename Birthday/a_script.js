@@ -65,6 +65,7 @@ for (var i = 0; i<slides.length; i++){
     this.style.left = "calc(5vw + " + totalWidth + "px)";
     totalWidth += this.width - 1;
     document.getElementById("name").innerHTML += " " + totalWidth + " " + this.width + ",";
+    document.getElementById("message").innerHTML += ", " + this.width;
     if (s==slides.length-1){
       changeSlide();
       document.getElementById("message").innerHTML = this.offsetWidth + ", " + this.width;
