@@ -16,8 +16,8 @@ if (window.innerHeight/window.innerWidth> 1.35){
   c2.style.top = "300px";
 }
 img.style.left = "calc(50vw - " + (img.getBoundingClientRect().width)/2 + "px)";
-c1.style.left = "calc(" + img.getBoundingClientRect().left + "px - 5vw)";
-c2.style.left = "calc(" + img.getBoundingClientRect().right + "px - 5vw)";
+c1.style.left = "calc(" + img.getBoundingClientRect().left + "px - 5%)";
+c2.style.left = "calc(" + img.getBoundingClientRect().right + "px - 5%)";
 
 function shuffle(array) {
   var currentIndex = array.length, temporaryValue, randomIndex;
@@ -62,8 +62,8 @@ for (var i = 0; i<slides.length; i++){
   tempSlide.onload = function(){
     this.style.display = "block";
     s++;
-    this.style.left = "calc(5vw + " + totalWidth + "px)";
-    totalWidth += this.width - 1;
+    this.style.left = "calc(2% + " + totalWidth + "px)";
+    totalWidth = this.getBoundingClientRect().right - 0.07*window.innerWidth  - 2;
     document.getElementById("name").innerHTML += " " + totalWidth + " " + this.width + ",";
     document.getElementById("message").innerHTML += ", " + this.width;
     if (s==slides.length-1){
