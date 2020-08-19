@@ -67,9 +67,7 @@ for (var i = 0; i<slides.length; i++){
     s++;
     this.style.left = "calc(5vw + " + totalWidth + "px)";
     totalWidth += this.width - 1;
-    if ( s == 20){
-      document.getElementById("name").innerHTML = totalWidth + ", " + this.width;
-    }
+    document.getElementById("name").innerHTML += this.getBoundingClientRect().width + ", " + this.width + ", ";
     if (s==slides.length-1){
       changeSlide();
     }
