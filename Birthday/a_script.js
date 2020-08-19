@@ -65,7 +65,7 @@ for (var i = 0; i<slides.length; i++){
   tempSlide.onload = function(){
     this.style.display = "block";
     this.style.left = "calc(5vw + " + totalWidth + "px)";
-    totalWidth = totalWidth + this.width - 1;
+//    totalWidth = totalWidth + this.width - 1;
     s++;
     if (s<=1){
       changeSlide();
