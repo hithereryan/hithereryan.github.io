@@ -15,10 +15,11 @@ if (window.innerHeight/window.innerWidth> 1.35){
   c1.style.top = "310px";
   c2.style.top = "310px";
 }
-img.style.left = "calc(50vw - " + (img.getBoundingClientRect().width)/2 + "px)";
-c1.style.left = "calc(" + img.getBoundingClientRect().left + "px - 5%)";
-c2.style.left = "calc(" + img.getBoundingClientRect().right + "px - 5%)";
-
+img.onload = function(){
+  img.style.left = "calc(50vw - " + (img.getBoundingClientRect().width)/2 + "px)";
+  c1.style.left = "calc(" + img.getBoundingClientRect().left + "px - 5%)";
+  c2.style.left = "calc(" + img.getBoundingClientRect().right + "px - 5%)";
+}
 function shuffle(array) {
   var currentIndex = array.length, temporaryValue, randomIndex;
   while (0 !== currentIndex) {
