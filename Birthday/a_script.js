@@ -39,7 +39,7 @@ changeSlide = function(){
       max = images[i].getBoundingClientRect().right;
     }
     if (i == slides.length-1){
-      totalWidth = max-7;
+      totalWidth = max-4;
     }
     var tempLeft = images[i].getBoundingClientRect().left;
     if (s == slides.length){
@@ -65,7 +65,7 @@ for (var i = 0; i<slides.length; i++){
   tempSlide.onload = function(){
     this.style.display = "block";
     this.style.left = "calc(5vw + " + totalWidth + "px)";
-    totalWidth = totalWidth + this.width-2;
+    totalWidth = totalWidth + this.width-1;
     s++;
     if (s<=1){
       changeSlide();
