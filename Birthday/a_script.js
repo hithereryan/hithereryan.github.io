@@ -69,7 +69,10 @@ for (var i = 0; i<slides.length; i++){
     s++;
     if (s<=1){
       changeSlide();
-      document.getElementById("name").innerHTML = this.width + ", " + totalWidth;
+      document.getElementById("name").innerHTML = totalWidth + ", " + this.width;
+    }
+    else{
+    document.getElementById("name").innerHTML = document.getElementById("name").innerHTML + this.getBoundingClientRect().left;
     }
   }
   tempSlide.src = slides[i];
