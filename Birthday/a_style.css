@@ -11,11 +11,6 @@ body{
   background-color: #96C0EB;
   text-align: center;
 }
-audio{
-  position: absolute;
-  left: 40%;
-  top: 96vh;
-}
 #name{
   position: relative;
   top: -1em;
@@ -33,12 +28,17 @@ audio{
 #top-line{
   height: 35vh;
 }
-#easter-egg{
-  font-size: 0.2vw;
+#easter-egg, audio{
   position: absolute;
   right: 10px;
   top: 96vh;
   margin: 10px;
+}
+#easter-egg{
+  font-size: 0.2vw;    
+}
+audio{
+  right: 40%;
 }
 #slideshow{
   width: 90vw;
