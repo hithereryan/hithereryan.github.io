@@ -11,6 +11,11 @@ body{
   text-align: center;
 }
 audio{
+  position: absolute;
+  left: 40%;
+  top: 96vh;
+}
+audio{
  position: relative;
  top: 20vw;
 }
