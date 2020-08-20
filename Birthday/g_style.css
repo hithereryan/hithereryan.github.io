@@ -1,6 +1,7 @@
 html, body {
     max-width: 100%;
     overflow-x: hidden;
+    overflow-y: visible;
 }
 h1{
   color: "blue";
@@ -15,10 +16,8 @@ body{
   top: -1em;
 }
 #firstImg{
-  height: 300px;
+  height: 33vh;
   position: absolute;
-  top: 9vw;
-  left: 40vw;
 }
 #message{
   position: relative;
@@ -26,15 +25,20 @@ body{
   font-size: 20px;
   left: 300px;
 }
-.top-line{
-  height: 25vw;
+#top-line{
+  height: 35vh;
 }
-#easter-egg{
-  font-size: 0.2vw;
+#easter-egg, audio{
   position: absolute;
   right: 10px;
-  top: 55vw;
+  top: 96vh;
   margin: 10px;
+}
+#easter-egg{
+  font-size: 0.2vw;    
+}
+audio{
+  right: 40%;
 }
 #slideshow{
   width: 90vw;
@@ -48,11 +52,13 @@ body{
 }
 .slideshow-img{
   position: absolute;
+  height: 20vw;
+  display: none;
 }
 .balloon{
     position: absolute;
-    top: 100px;
-    height: 250px;
+    top: 80px;
+    height: inherit;
 }
 #b1{
   position: absolute;
@@ -65,11 +71,11 @@ body{
 .cupcake{
   position: absolute;
   width: 10vw;
-  top: 20vw;
+  top: 33vh;
 }
 #c1{
   left: 32vw;
 }
 #c2{
-  left: 53vw;
+  left: 58vw;
 }
