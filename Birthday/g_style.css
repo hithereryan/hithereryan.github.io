@@ -14,9 +14,10 @@ body{
 #name{
   position: relative;
   top: -1em;
+  font-size: 20px;
 }
 #firstImg{
-  height: 33vh;
+  height: 34vh;
   position: absolute;
 }
 #message{
@@ -26,9 +27,7 @@ body{
   left: 300px;
 }
 #top-line{
-  height: 35vh;
-  position: relative;
-  border: 2px solid black;
+  height: 36vh;
 }
 #easter-egg, audio{
   position: absolute;
