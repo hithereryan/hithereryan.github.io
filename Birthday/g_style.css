@@ -27,6 +27,8 @@ body{
 }
 #top-line{
   height: 35vh;
+  position: relative;
+  border: 2px solid black;
 }
 #easter-egg, audio{
   position: absolute;
