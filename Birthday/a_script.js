@@ -43,7 +43,7 @@ changeSlide = function(){
       totalWidth = max-4;
     }
     var tempLeft = images[i].getBoundingClientRect().left;
-    if (s == slides.length){
+    if (s == slides.length || s >= 10){
       tempLeft-=1.5;
     }
     if (tempLeft <= -images[i].getBoundingClientRect().width){
