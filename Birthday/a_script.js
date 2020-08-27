@@ -17,8 +17,8 @@ if (window.innerHeight/window.innerWidth> 1.35){
 }
 img.onload = function(){
   img.style.left = "calc(50vw - " + (img.getBoundingClientRect().width)/2 + "px)";
-  c1.style.left = "calc(" + img.getBoundingClientRect().left + "px - 5%)";
-  c2.style.left = "calc(" + img.getBoundingClientRect().right + "px - 5%)";
+  c1.style.left = "calc(" + img.getBoundingClientRect().left+window.scrollX + "px - 5%)";
+  c2.style.left = "calc(" + img.getBoundingClientRect().right+window.scrollX + "px - 5%)";
 }
 function shuffle(array) {
   var currentIndex = array.length, temporaryValue, randomIndex;
@@ -36,13 +36,13 @@ function shuffle(array) {
 changeSlide = function(){
   var max =0;
   for (var i = 0; i<s; i++){
-    if (images[i].getBoundingClientRect().right > max){
-      max = images[i].getBoundingClientRect().right;
+    if (images[i].getBoundingClientRect().right+ window.scrollX > max){
+      max = images[i].getBoundingClientRect().right+ window.scrollX;
     }
     if (i == slides.length-1){
       totalWidth = max-4;
     }
-    var tempLeft = images[i].getBoundingClientRect().left;
+    var tempLeft = images[i].getBoundingClientRect().left+ window.scrollX;
     if (s == slides.length || s >= 10){
       tempLeft-=1.5;
     }
@@ -64,7 +64,7 @@ for (var i = 0; i<slides.length; i++){
     this.style.display = "block";
     s++;
     this.style.left = "calc(2% + " + totalWidth + "px)";
-    totalWidth = this.getBoundingClientRect().right - 0.07*window.innerWidth  - 2;
+    totalWidth = this.getBoundingClientRect().right+ window.scrollX - 0.07*window.innerWidth  - 2;
     if (s==20){
       changeSlide();
     }
