@@ -154,6 +154,7 @@ function checkBomb(e){
   var td = document.getElementById("r"+spot);
   if (e.which == 1){
     //if bomb
+    console.log(td.childNodes[2].src);
     if (td.childNodes[2].src!="file:///C:/Users/Ryan/OneDrive/Desktop/Projects/Atom%20Files/Minesweeper/flagged.png"){
       if (cell.innerHTML === "x"){
           td.childNodes[2].src="bomb.png";
