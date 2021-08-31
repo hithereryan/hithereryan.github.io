@@ -146,7 +146,6 @@ function checkBomba(bx, by){
 function checkBomb(e){
   bx=e.currentTarget.ax;
   by=e.currentTarget.ay;
-  console.log(bx, by);
   clicked.push(bx+","+by);
   spot = bx+"+"+by;
   //get cell that is being checked
@@ -154,8 +153,7 @@ function checkBomb(e){
   var td = document.getElementById("r"+spot);
   if (e.which == 1){
     //if bomb
-    console.log(td.childNodes[2].src);
-    if (td.childNodes[2].src!="file:///C:/Users/Ryan/OneDrive/Desktop/Projects/Atom%20Files/Minesweeper/flagged.png"){
+    if (td.childNodes[2].src!="https://hithereryan.github.io/Minesweeper/flagged.png"){
       if (cell.innerHTML === "x"){
           td.childNodes[2].src="bomb.png";
           gameOver();
@@ -198,13 +196,13 @@ function gameOver(){
         let td = document.getElementById("r"+i+"+"+j)
         //reveal bombs
         if (cell.innerHTML === "x"){
-          if (td.childNodes[2].src!="file:///C:/Users/Ryan/OneDrive/Desktop/Projects/Atom%20Files/Minesweeper/flagged.png"){
+          if (td.childNodes[2].src!="https://hithereryan.github.io/Minesweeper/flagged.png"){
             td.childNodes[2].src="bomb.png";
           }
         }
         else{
           //if falsely flagged, show with x over it
-          if (td.childNodes[2].src=="file:///C:/Users/Ryan/OneDrive/Desktop/Projects/Atom%20Files/Minesweeper/flagged.png"){
+          if (td.childNodes[2].src=="https://hithereryan.github.io/Minesweeper/flagged.png"){
             td.childNodes[2].src="bombx.PNG";
           }
         }
@@ -218,11 +216,11 @@ function rightClick(e){
   td = document.getElementById("r"+x+"+"+y);
   if (clicked.includes(x+","+y)===false){
     //on click, flip between flag and unclicked. Then update mine counter
-    if (td.childNodes[2].src=="file:///C:/Users/Ryan/OneDrive/Desktop/Projects/Atom%20Files/Minesweeper/flagged.png"){
+    if (td.childNodes[2].src=="https://hithereryan.github.io/Minesweeper/flagged.png"){
       td.childNodes[2].src="Minesweeper_unopened_square.svg.png";
       minesLeft++;
     }
-    else if (td.childNodes[2].src=="file:///C:/Users/Ryan/OneDrive/Desktop/Projects/Atom%20Files/Minesweeper/Minesweeper_unopened_square.svg.png"){
+    else if (td.childNodes[2].src=="https://hithereryan.github.io/Minesweeper/Minesweeper_unopened_square.svg.png"){
       td.childNodes[2].src="flagged.png";
       minesLeft -=1;
     }
