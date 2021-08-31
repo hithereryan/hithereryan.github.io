@@ -1,34 +1,7 @@
-td{
-    border-spacing:0;
-    table-layout: fixed;
+body{
+  position: relative;
+  top: 50px;
+  background-color: lightblue;
+  font-size: 30px;
+  text-align: center;
 }
-tr, td, table{
-  padding: 0px;
-  margin: 0px;
-}
-tr{
-
-}
-table{
-  border: 3.5px solid black;
-  table-layout: fixed;
-  border-spacing:0;
-}
-.num{
-  display: none;
-}
-p{
-  font-size: 24px;
-  display: inline-block;
-}
-#minesleft{
-  color: red;
-}
-#reset{
-  border: 2px solid chartreuse;
-  background-color: chartreuse;
-}
-/* #easy, #intermediate, #expert{
-  border: 2px solid aqua;
-  background: aqua;
-} */
