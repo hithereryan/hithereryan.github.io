@@ -1,0 +1,78 @@
+html, body {
+    overflow-y: visible;
+    overflow-x: hidden;
+}
+h1{
+  color: "blue";
+  position: relative;
+}
+body{
+  background-color: #11CDEE;
+  text-align: center;
+}
+audio{
+  position: absolute;
+  left: calc(50% - 140px);
+  top: 92vh;
+  height: 4vh;
+}
+.align{
+  text-align: center;
+}
+#name{
+  position: relative;
+  top: -1em;
+}
+#firstImg{
+  height: 35vh;
+  position: absolute;
+  left: 42vw;
+}
+#message{
+  position: relative;
+  top: 80px;
+  font-size: 20px;
+  left: 300px;
+}
+#top-line{
+  position: relative;
+  height: 35vh;
+  top: -3vh;
+}
+#easter-egg{
+  font-size: 0.2vw;
+  position: absolute;
+  right: 10px;
+  top: 96vh;
+  margin: 10px;
+}
+#slideshow{
+  width: 90%;
+  overflow-x: hidden;
+  overflow-y:visible;
+  position: absolute;
+  left: 5%;
+  height: 40vh;
+  top: calc(100px + 39vh);
+}
+.slideshow-img{
+  position: absolute;
+  height: 40vh;
+}
+.heart{
+  position: absolute;
+  width: 6vh;
+  top: 39vh;
+}
+#rh1{
+  left:calc(50vw - 14.4vh);
+}
+#rh2{
+  left:calc(50vw + 10.4vh);
+}
+#gif{
+  position: absolute;
+  height: 30vh;
+  top: 120px;
+  left: calc(21% - 15vh);
+}
