@@ -32,6 +32,7 @@ audio{
   top: 80px;
   font-size: 20px;
   left: 330px;
+  overflow-x: scroll;
 }
 #top-line{
   position: relative;
