@@ -26,13 +26,12 @@ audio{
 #firstImg{
   height: 35vh;
   position: absolute;
-  left: 42vw;
 }
 #message{
   position: relative;
   top: 80px;
   font-size: 20px;
-  left: 300px;
+  left: 330px;
 }
 #top-line{
   position: relative;
@@ -65,10 +64,10 @@ audio{
   top: 39vh;
 }
 #rh1{
-  left:calc(50vw - 14.4vh);
+  left:calc(50vw - 15.2vh);
 }
 #rh2{
-  left:calc(50vw + 10.4vh);
+  left:calc(50vw + 11.2vh);
 }
 #gif{
   position: absolute;
