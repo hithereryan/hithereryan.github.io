@@ -73,7 +73,7 @@ for (var i = 0; i<slides.length; i++){
   tempSlide.onload = function(){
     s++;
     for (var i = 0; i<slides.length; i++){
-
+      console.log(tempSlide.src);
       if (tempSlide.src == "file:///C:/Users/Ryan/OneDrive/Desktop/Projects/Atom%20Files/Addy/"+slides[i]){
         images[i]=tempSlide;
       }
