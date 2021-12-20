@@ -1,4 +1,7 @@
 var slides = ["Addy/download.png",
+"Addy/IMG_2125.JPEG",
+"Addy/IMG_2139.JPEG",
+"Addy/IMG_3779.JPEG",
 "Addy/IMG_0001.jpg",
 "Addy/IMG_0756.JPEG",
 "Addy/IMG_1864.JPEG",
