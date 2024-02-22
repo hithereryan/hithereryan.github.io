@@ -29,6 +29,10 @@ li{
   background-color: lightblue;
 }
 
+.accordion-body{
+  font-size: 25px;
+}
+
 .accordion-item{
   border-width: 2px;
   border-color: black;
@@ -104,10 +108,14 @@ li{
   width: 60vw;
 }
 
-#resume, #projects{
-  margin-top: 50px;
+#experience, #projects{
+  padding: 3vw;
 }
 
 #intro{
   margin-top: 0;
+}
+
+#resume{
+  margin: 30px 0px
 }
